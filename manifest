@@ -1,0 +1,11 @@
+/* ==UserStyle==
+@name           reddit.com - 9/13/2022, 12:58:14 PM
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A custom dark reddit theme made for personal use
+@author         Kazandaki
+@preprocessor   stylus
+
+
+@var color accentColor 'Accent Color' #D7500D
+==/UserStyle== */

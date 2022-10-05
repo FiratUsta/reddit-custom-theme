@@ -18,7 +18,7 @@
     
     /* REMOVALS */
     
-    .spacer .premium-banner-outer, .sidebox .spacer, .footer-parent, .buttons .give-gold.gold-give-gold, .sidecontentbox, .linkinfo.snoovatar-link, .giftgold, tr.gold-accent{
+    .spacer .premium-banner-outer, .sidebox .spacer, .footer-parent, .buttons .give-gold.gold-give-gold, .sidecontentbox, .linkinfo.snoovatar-link, .giftgold, tr.gold-accent, .infobar.listingsignupbar{
         display: none;
     }
     
@@ -134,7 +134,7 @@
         display: none;
     }
     
-    .account-activity-box a{
+    .account-activity-box a, #remember-me{
         color: var(--color-foreground);
     }
     

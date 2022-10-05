@@ -1,5 +1,7 @@
 @-moz-document domain("reddit.com") {
     
+    @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+    
     :root{
         --color-dark: #202020;
         --color-light: #404040;
@@ -16,35 +18,7 @@
     
     /* REMOVALS */
     
-    .spacer .premium-banner-outer{
-        display: none;
-    }
-    
-    .sidebox .spacer{
-        display: none;
-    }
-    
-    .footer-parent{
-        display: none;
-    }
-    
-    .buttons .give-gold.gold-give-gold{
-        display: none;
-    }
-    
-    .sidecontentbox{
-        display: none;
-    }
-    
-    .linkinfo.snoovatar-link{
-        display: none;
-    }
-    
-    .giftgold{
-        display: none;
-    }
-    
-    tr.gold-accent{
+    .spacer .premium-banner-outer, .sidebox .spacer, .footer-parent, .buttons .give-gold.gold-give-gold, .sidecontentbox, .linkinfo.snoovatar-link, .giftgold, tr.gold-accent{
         display: none;
     }
     
@@ -53,7 +27,7 @@
     /* HEADER */
     
     #header{
-        height: 30px;
+        height: 50px;
         background: var(--color-dark);
         border-bottom: none;
         box-shadow: 10px 0 5px 5px #00000080;
@@ -61,15 +35,23 @@
     }
     
     #header-img.default-header{
-        /*padding-bottom: 10px;*/
-        display: none;
+        background-image:none;
+        text-indent: 0;
+        text-decoration: none;
+        color: #fff0;
     }
     
-    /* #header-img.default-header{
-        background-image: url(https://seeklogo.com/images/R/reddit-logo-23F13F6A6A-seeklogo.com.png);
-        background-position: center;
-        background-size: 40px;
-    } */
+    .default-header::before{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        content: "reddit.";
+        color: var(--color-accent);
+        font-weight: bold;
+        font-size: 32px;
+        font-family: 'Varela Round', sans-serif;
+        margin-left: -10px;
+    }
     
     #sr-header-area{
         display: none
@@ -108,7 +90,7 @@
     
     .tabmenu li.selected a{
         background-color: var(--color-foreground);
-        color: var(--color-accent);
+        color: var(--color-dark);
         border: none;
         text-decoration: none;
     }
@@ -166,7 +148,7 @@
     
     body.with-listing-chooser .listing-chooser{
         background-color: var(--color-dark);
-        margin-top: -30px;
+        margin-top: -10px;
         padding: 0;
     }
     
@@ -248,13 +230,27 @@
         aspect-ratio: 1/1;
     }
     
-    .thumbnail.self, .thumbnail.spoiler, .thumbnail.default{
-        background-image: url(https://i.ibb.co/0qJP4dY/uMnfCa.png);
+    .thumbnail.self, .thumbnail.spoiler, .thumbnail.default, .thumbnail.image{
         background-position: center !important;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 40px;
     }
     
+    .thumbnail.self{
+        background-image: url(https://raw.githubusercontent.com/KazaKazan/reddit-custom-theme/d83b6351ee6e42f3c7e40cf29ba277f6398b48b6/Assets/text.svg);
+    }
+    
+    .thumbnail.spoiler{
+        background-image: url(https://raw.githubusercontent.com/KazaKazan/reddit-custom-theme/d83b6351ee6e42f3c7e40cf29ba277f6398b48b6/Assets/spoiler.svg);
+    }
+
+    .thumbnail.default{
+        background-image: url(https://raw.githubusercontent.com/KazaKazan/reddit-custom-theme/d83b6351ee6e42f3c7e40cf29ba277f6398b48b6/Assets/link.svg);
+    }
+    
+    .thumbnail.image{
+        background-image: url(https://raw.githubusercontent.com/KazaKazan/reddit-custom-theme/d83b6351ee6e42f3c7e40cf29ba277f6398b48b6/Assets/img.svg);
+    }
     
     .thumbnail img{
         height: 100%;
@@ -267,7 +263,7 @@
     }
     
     .thing{
-        padding: 10px 0 10px 0;
+        padding: 10px 0 10px 10px;
         background-color: var(--color-light);
         margin: 0;
         margin-bottom: 5px;
@@ -304,6 +300,42 @@
     
     .crosspost-preview.video .crosspost-preview-content{
         background-color: var(--color-light);
+    }
+    
+    .arrow{
+        margin-bottom: 1px;
+        margin-top: 0;
+    }
+    
+    .arrow.up, .arrow.down{
+        background-image: url(https://raw.githubusercontent.com/KazaKazan/reddit-custom-theme/350287681d2f89572baf524893eb46c9159f61d1/Assets/arrow.svg);
+        background-position: center;
+    }
+    
+    .arrow.upmod, .arrow.downmod{
+        background-image: url(https://raw.githubusercontent.com/KazaKazan/reddit-custom-theme/1e5f093803061fddc2ef2184ce9f77484e91ff7c/Assets/upvote.svg);
+        background-position: center;
+    }
+    
+    .arrow.down, .arrow.downmod{
+        transform: rotate(180deg);
+    }
+    
+    .link .score.likes{
+        color: white;
+    }
+    
+    .link .score.dislikes{
+        color: white;
+    }
+    
+    .message.new > .entry{
+        background-color: #fff0;
+        border: none;
+    }
+    
+    .morecomments a,.morecomments .gray{
+        color: var(--color-accent);
     }
     
     /* === SUBREDDIT PAGE === */
@@ -537,6 +569,22 @@
         color: var(--color-accent);
     }
     
+    .content p, .content form, td{
+        color: var(--color-foreground);
+    }
+    
+    .usertable tr:hover{
+        background-color: #fff0;
+    }
+    
+    .roundfield, .white-field{
+        background-color: #fff0;
+    }
+    
+    .md a, .flat-list li.selected a{
+        color: var(--color-accent);
+    }
+    
     /* === USER PAGE === */
     
     a {
@@ -549,6 +597,14 @@
         color: var(--color-foreground);
         text-decoration: underline;
         font-weight: bolder;
+    }
+    
+    .dropdown-title{
+        color: var(--color-foreground);
+    }
+    
+    .parent{
+        color: var(--color-foreground);
     }
     
 }

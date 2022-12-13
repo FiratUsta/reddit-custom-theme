@@ -651,4 +651,8 @@
         border-top-color: var(--color-foreground);
     }
     
+    #newlink-with-image-upload .image-upload-drop-target{
+        background-color: transparent;
+        border-color: var(--color-accent);
+    }    
 }

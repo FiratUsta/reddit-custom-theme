@@ -4,7 +4,7 @@ A custom dark theme for Reddit with color customization, made to look modern wit
 
 This is primarily a theme I made for myself and I'm just sharing it in case anyone happens to find it useful, so it removes some of the features that I don't personally use such as any references to premium features, ads and gold gifting.
 
-This is a WIP but it should be ready for daily use.
+This should be ready for daily use.
 
 ## Screenshots
 

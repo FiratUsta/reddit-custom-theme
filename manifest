@@ -6,6 +6,8 @@
 @author         Kazandaki
 @preprocessor   stylus
 
-
+@var color bgDarkColor 'Dark Color' #202020
+@var color bgLightColor 'Light Color' #404040
+@var color fgColor 'Foreground Color' #E2D8D6
 @var color accentColor 'Accent Color' #D7500D
 ==/UserStyle== */

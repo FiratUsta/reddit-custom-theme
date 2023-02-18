@@ -3,9 +3,9 @@
     @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
     
     :root{
-        --color-dark: #202020;
-        --color-light: #404040;
-        --color-foreground: #e2d8d6;
+        --color-dark: bgDarkColor;
+        --color-light: bgLightColor;
+        --color-foreground: fgColor;
         --color-accent: accentColor;
     }
     
@@ -148,7 +148,7 @@
     
     body.with-listing-chooser .listing-chooser{
         background-color: var(--color-dark);
-        margin-top: -10px;
+        margin-top: -5px;
         padding: 0;
     }
     
@@ -276,10 +276,6 @@
         margin-top: -2px;
         margin-right: 10px;
         border-radius: 0 15px 15px 0;
-    }
-    
-    .thing:hover{
-        background-color: #505050;
     }
     
     .rank{
